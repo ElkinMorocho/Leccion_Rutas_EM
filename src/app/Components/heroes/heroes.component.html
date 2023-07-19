@@ -1,4 +1,4 @@
-<h1>Heroes <small>Marvel y DC</small></h1>
+<h1>Rutas <small>Rutas del terminal</small></h1>
 <hr>
 <div class="col animated fadeIn fast" *ngFor="let heroe of heroes; let i =index">
   <div class="card mb-3" style="max-width: 540px;">
@@ -8,10 +8,14 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{heroe.nombre}}</h5>
-          <p class="card-text">{{heroe.bio}}</p>
+          <h5 class="card-subtitle">Ciudad Origen: {{heroe.Ciudad_Origen}}</h5>
+          <hr>
+          <h5 class="card-subtitle"> CiudadDestino: {{heroe.Ciudad_Destino}}</h5>
+          <hr>
           <p class="card-text"><small class="text-body-secondary">
-            {{heroe.aparicion}}</small></p>
+            Descripcion: {{heroe.Descripcion}}</small></p>
+            <p class="card-text">Precio Ruta: {{heroe.Precio_Ruta}}</p>
+            <h6 class="card-text">{{heroe.Tipo}}</h6>
           <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Saber más</button>
         </div>
       </div>

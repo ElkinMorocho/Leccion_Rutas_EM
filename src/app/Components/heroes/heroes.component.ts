@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HeroesService, Heroe } from 'src/app/services/heroes.service';
+import { HeroesService, Rutas } from 'src/app/services/heroes.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { HeroesService, Heroe } from 'src/app/services/heroes.service';
 })
 export class HeroesComponent {
 
-  heroes: Heroe [] = [];
+  heroes: Rutas [] = [];
 
   ngOnInit(): void {
     this.heroes = this._heroesServices.getHeroes();

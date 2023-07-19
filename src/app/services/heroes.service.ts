@@ -5,56 +5,88 @@ import { Injectable } from '@angular/core';
 })
 export class HeroesService {
 
-  private heroes:Heroe[] = [
+  private heroes:Rutas[] = [
     {
-      nombre: "Aquaman",
-      bio: "El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.",
-      img: "assets/img/aquaman.png",
-      aparicion: "1941-11-01",
-      casa:"DC"
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Loja",
+      Precio_Ruta: "10.00",
+      img:"assets/img/bus.png",
+      Descripcion: "La ruta entre Machala y Loja es un viaje terrestre en Ecuador que recorre una distancia considerable entre dos ciudades importantes.",
+      Tipo:"interno"
     },
     {
-      nombre: "Batman",
-      bio: "Los rasgos principales de Batman se resumen en «destreza física, habilidades deductivas y obsesión». La mayor parte de las características básicas de los cómics han variado por las diferentes interpretaciones que le han dado al personaje.",
-      img: "assets/img/batman.png",
-      aparicion: "1939-05-01",
-      casa:"DC"
+      Ciudad_Origen: "Guayaquil",
+      Ciudad_Destino: "Loja",
+      Precio_Ruta: "12.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Guayaquil a Loja",
+      Tipo:"Externo"
     },
     {
-      nombre: "Daredevil",
-      bio: "Al haber perdido la vista, los cuatro sentidos restantes de Daredevil fueron aumentados por la radiación a niveles superhumanos, en el accidente que tuvo cuando era niño. A pesar de su ceguera, puede \"ver\" a través de un \"sexto sentido\" que le sirve como un radar similar al de los murciélagos.",
-      img: "assets/img/daredevil.png",
-      aparicion: "1964-01-01",
-      casa: "Marvel"
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Huaquillas",
+      Precio_Ruta: "3.50",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Huaquillas",
+      Tipo:"Interno"
     },
     {
-      nombre: "Hulk",
-      bio: "Su principal poder es su capacidad de aumentar su fuerza hasta niveles prácticamente ilimitados a la vez que aumenta su furia. Dependiendo de qué personalidad de Hulk esté al mando en ese momento (el Hulk Banner es el más débil, pero lo compensa con su inteligencia).",
-      img: "assets/img/hulk.png",
-      aparicion: "1962-05-01",
-      casa:"Marvel"
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Zaruma",
+      Precio_Ruta: "5.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Zaruma",
+      Tipo:"Externo"
     },
     {
-      nombre: "Linterna Verde",
-      bio: "Poseedor del anillo de poder que posee la capacidad de crear manifestaciones de luz sólida mediante la utilización del pensamiento. Es alimentado por la Llama Verde (revisada por escritores posteriores como un poder místico llamado Starheart), una llama mágica contenida en dentro de un orbe (el orbe era en realidad un meteorito verde de metal que cayó a la Tierra, el cual encontró un fabricante de lámparas llamado Chang)",
-      img: "assets/img/linterna-verde.png",
-      aparicion: "1940-06-01",
-      casa: "DC"
+      Ciudad_Origen: "Zaruma",
+      Ciudad_Destino: "Loja",
+      Precio_Ruta: "5.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Zaruma a Loja",
+      Tipo:"Interno"
     },
     {
-      nombre: "Spider-Man",
-      bio: "Tras ser mordido por una araña radiactiva, obtuvo los siguientes poderes sobrehumanos, una gran fuerza, agilidad, poder trepar por paredes. La fuerza de Spider-Man le permite levantar 10 toneladas o más. Gracias a esta gran fuerza Spider-Man puede realizar saltos íncreibles. Un \"sentido arácnido\", que le permite saber si un peligro se cierne sobre él, antes de que suceda. En ocasiones este puede llevar a Spider-Man al origen del peligro.",
-      img: "assets/img/spiderman.png",
-      aparicion: "1962-08-01",
-      casa: "Marvel"
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Quito",
+      Precio_Ruta: "15.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Quito",
+      Tipo:"Interno"
     },
     {
-      nombre: "Wolverine",
-      bio: "En el universo ficticio de Marvel, Wolverine posee poderes regenerativos que pueden curar cualquier herida, por mortal que ésta sea, además ese mismo poder hace que sea inmune a cualquier enfermedad existente en la Tierra y algunas extraterrestres . Posee también una fuerza sobrehumana, que si bien no se compara con la de otros superhéroes como Hulk, sí sobrepasa la de cualquier humano.",
-      img: "assets/img/wolverine.png",
-      aparicion: "1974-11-01",
-      casa: "Marvel"
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Pasaje",
+      Precio_Ruta: "7.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Pasaje",
+      Tipo:"Externo"
+    },
+    {
+      Ciudad_Origen: "Cuenca",
+      Ciudad_Destino: "Manabi",
+      Precio_Ruta: "10.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Manabi",
+      Tipo:"Externo"
+    },
+    {
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Santa Rosa",
+      Precio_Ruta: "12.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Santa Rosa",
+      Tipo:"Interno"
+    },
+    {
+      Ciudad_Origen: "Machala",
+      Ciudad_Destino: "Cuenca",
+      Precio_Ruta: "7.00",
+      img:"assets/img/bus.png",
+      Descripcion: "Este bus tiene de ruta de Machala a Cuenca",
+      Tipo:"Externo"
     }
+
   ];
 
   getHeroes (){
@@ -63,16 +95,16 @@ export class HeroesService {
   constructor() { 
     console.log("Servicio listo para usar...");
   }
-  getHeroe(idx:number):Heroe {
+  getHeroe(idx:number):Rutas {
     return this.heroes[idx];
   }
 
-  buscarH(dato:string) : Heroe[] {
-    let heroesArr:Heroe[] = [];
+  buscarH(dato:string) : Rutas[] {
+    let heroesArr:Rutas[] = [];
     dato = dato.toLocaleLowerCase();
     for(let i = 0; i < this.heroes.length; i++) {
       let heroe = this.heroes[i];
-      let nombre = heroe.nombre.toLocaleLowerCase();
+      let nombre = heroe.Ciudad_Origen.toLocaleLowerCase();
       if(nombre.indexOf(dato) >= 0) {
         heroe.ident = i;
         heroesArr.push(heroe);
@@ -82,11 +114,12 @@ export class HeroesService {
   }
 }
 
-export interface Heroe{
-  nombre: string;
-  bio: string;
-  img: string
-  aparicion: string;
-  casa: string;
+export interface Rutas{
+  Ciudad_Origen: string;
+  Ciudad_Destino: string;
+  Precio_Ruta: string;
+  img: string;
+  Descripcion: string;
+  Tipo: string;
   ident?:number;
 }
